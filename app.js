@@ -1,4 +1,3 @@
 let ism = prompt("Ismingizni kiriting: ")
-let result = ism.charAt(1).toUpperCase()
-console.log(ism)
+let result = ism.charAt().toUpperCase()+ism.slice(1).toLowerCase()
 console.log(result)
