@@ -59,3 +59,16 @@
 //     case "Namangan": console.log(`Namangan  aholi soni : 1.8 mln `); break;
 //     default: console.log(`Siz so'ragan viloyat aholi sonini men bilmayman `);
 // }
+
+
+//5-task
+// const meyor = 20
+// let parol = prompt("Biror nima deb yozing: ")
+// if(parol.length < 20){
+//     alert(`Yana biror narsa yozing, ${ 20 - parol.length} ta belgi yozishingiz mumkin`)
+// }else if (parol.length>20){
+//     alert(`Siz ko'p belgi kiritdingiz!!!!  ${parol.length - 20} ta belgini o'chirishingiz kerak.`)
+// }else
+//     {
+//     alert(`Siz yetralicha belgi kiritdingiz`)
+// }
