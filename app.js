@@ -35,11 +35,18 @@
 // console.log(result);
 
 // 2-task
-let names = ["Gulbahor", 'Gulasal', 'Gulshanoy']
-let requested_name = prompt("Biror ism kiriting: ")
-    if(names.includes(requested_name)){
-        console.log(`So'ralgan ism bor`);
-    }else{
-        console.log(`So'ralgan ism yo'q`);
-    } 
+// let names = ["Gulbahor", 'Gulasal', 'Gulshanoy']
+// let requested_name = prompt("Biror ism kiriting: ")
+//     if(names.includes(requested_name)){
+//         console.log(`So'ralgan ism bor`);
+//     }else{
+//         console.log(`So'ralgan ism yo'q`);
+//     } 
     
+//3-task
+// let names = ['Gulbahor', 'Gulsanam', 'Gulshanoy']
+// for(let i=1; i<=names.length; i++){
+//     let result = names[i]+'xon'
+//     console.log(result);
+// }
+
