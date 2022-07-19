@@ -50,3 +50,12 @@
 //     console.log(result);
 // }
 
+
+//4-task 
+// let viloyat_nomi = prompt("Viloyat nomini kiriting: ")
+// switch (viloyat_nomi){
+//     case "Fergana": console.log(`Fergana aholi soni : 2.2 mln `); break;
+//     case "Andijon": console.log(`Andijon aholi soni : 2 mln `); break;
+//     case "Namangan": console.log(`Namangan  aholi soni : 1.8 mln `); break;
+//     default: console.log(`Siz so'ragan viloyat aholi sonini men bilmayman `);
+// }
