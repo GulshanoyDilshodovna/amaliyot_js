@@ -74,15 +74,13 @@
 // }
 
 //FUNCTION 
-
 // function decloration
-function say(name){
-    console.log(`Good morning, ${name}`);
-}
-say('Gulshanoy')
+// function say(name){
+//     console.log(`Good morning, ${name}`);
+// }
+// say('Gulshanoy')
 
 //object
-
 const user = {
     name: 'Gulshanoy',
     age: 22,
@@ -98,4 +96,4 @@ const user = {
     }
 }
 
-alert(user())
+console.log(user())
