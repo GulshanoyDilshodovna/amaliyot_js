@@ -95,5 +95,4 @@ const user = {
         console.log(`Hurmatli ${user.name}, siz bu saytdan muvaffaqqiyatli ciqdingiz `);
     }
 }
-
-console.log(user())
+console.log(user.logout())
