@@ -72,3 +72,30 @@
 //     {
 //     alert(`Siz yetralicha belgi kiritdingiz`)
 // }
+
+//FUNCTION 
+
+// function decloration
+function say(name){
+    console.log(`Good morning, ${name}`);
+}
+say('Gulshanoy')
+
+//object
+
+const user = {
+    name: 'Gulshanoy',
+    age: 22,
+    married: false,
+    email: 'gulshanoydilshodovna@gmail.com',
+    location: 'Fergana',
+    language: ['uzbek', 'russian', 'english'],
+    login: function(){
+        console.log(`Hurmatli ${user.name}, siz bu saytga muvaffaqqiyatli kirdingiz! `);
+    },
+    logout: function(){
+        console.log(`Hurmatli ${user.name}, siz bu saytdan muvaffaqqiyatli ciqdingiz `);
+    }
+}
+
+alert(user())
