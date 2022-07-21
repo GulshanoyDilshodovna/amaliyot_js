@@ -172,3 +172,14 @@
 //     typeOfData.push(typeof type)
 // })
 // console.log(typeOfData);
+//9-task 1-path
+// let data = 'berilgan text'
+// let count = 0
+// splitData = data.split('')
+// splitData.forEach((item, i)=>{
+//     count++
+// })
+// console.log(count)
+//9-task 2-path
+// let word = 'berilgan matn'
+// console.log(word.lastIndexOf(word.slice(-1))+1)
