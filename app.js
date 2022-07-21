@@ -23,8 +23,6 @@
 //     j++
 // }while(j<4)
 
-
-
 //Amaliyot 2 19.07.2022
 
 //1-task
@@ -41,8 +39,8 @@
 //         console.log(`So'ralgan ism bor`);
 //     }else{
 //         console.log(`So'ralgan ism yo'q`);
-//     } 
-    
+//     }
+
 //3-task
 // let names = ['Gulbahor', 'Gulsanam', 'Gulshanoy']
 // for(let i=1; i<=names.length; i++){
@@ -50,8 +48,7 @@
 //     console.log(result);
 // }
 
-
-//4-task 
+//4-task
 // let viloyat_nomi = prompt("Viloyat nomini kiriting: ")
 // switch (viloyat_nomi){
 //     case "Fergana": console.log(`Fergana aholi soni : 2.2 mln `); break;
@@ -59,7 +56,6 @@
 //     case "Namangan": console.log(`Namangan  aholi soni : 1.8 mln `); break;
 //     default: console.log(`Siz so'ragan viloyat aholi sonini men bilmayman `);
 // }
-
 
 //5-task
 // const meyor = 20
@@ -73,7 +69,7 @@
 //     alert(`Siz yetralicha belgi kiritdingiz`)
 // }
 
-//FUNCTION 
+//FUNCTION
 // function decloration
 // function say(name){
 //     console.log(`Good morning, ${name}`);
@@ -112,7 +108,7 @@
 //         console.log(i);
 //     }
 // })
-//2-task 
+//2-task
 // let data = [[12,4,5], true, 76, [3,7,12], false, 'Gulshanoy']
 // let newData = []
 // data.forEach((item)=>{
@@ -120,7 +116,7 @@
 //     if(key){
 //       item.forEach((nbr)=>{
 //         newData.push(nbr)
-//       }) 
+//       })
 //     }
 // })
 // console.log(newData);
@@ -141,7 +137,7 @@
 //     newWord+=item
 // })
 // console.log(newWord);
-//5-task 
+//5-task
 // let newData = ''
 // let data = prompt("Biror nima deb yozing: ")
 // let splitData = data.split(' ')
@@ -151,11 +147,21 @@
 // })
 // console.log(newData);
 //6-task
-// const nbrs = [12, 3, -822, false, undefined, null, 7, 'men', undefined]
+// const nbrs = [12, 3, -822, false, undefined, Infinity, null, 7, 'men', undefined]
 // let total = 0
-// nbrs.forEach((nbr)=>{
-//     if(nbr>0){
-//         total+=nbr
+// nbrs.forEach((n)=>{
+//     if(n>0.0 && Math.floor(n)===n && n!==Infinity){
+//         total+=n
 //     }
 // })
 // console.log(total);
+//7-task
+// let data = prompt("Biror so'z kiriting: ");
+// let count = 0;
+// splitData = data.split("");
+// splitData.forEach((item, i) => {
+//   if (item == "a") {
+//     count++;
+//   }
+// });
+// console.log(count);
