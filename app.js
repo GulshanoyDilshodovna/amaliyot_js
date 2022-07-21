@@ -150,3 +150,12 @@
 //    newData+=' '+okData
 // })
 // console.log(newData);
+//6-task
+// const nbrs = [12, 3, -822, false, undefined, null, 7, 'men', undefined]
+// let total = 0
+// nbrs.forEach((nbr)=>{
+//     if(nbr>0){
+//         total+=nbr
+//     }
+// })
+// console.log(total);
