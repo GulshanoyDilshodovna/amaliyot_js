@@ -81,18 +81,34 @@
 // say('Gulshanoy')
 
 //object
-const user = {
-    name: 'Gulshanoy',
-    age: 22,
-    married: false,
-    email: 'gulshanoydilshodovna@gmail.com',
-    location: 'Fergana',
-    language: ['uzbek', 'russian', 'english'],
-    login: function(){
-        console.log(`Hurmatli ${user.name}, siz bu saytga muvaffaqqiyatli kirdingiz! `);
-    },
-    logout: function(){
-        console.log(`Hurmatli ${user.name}, siz bu saytdan muvaffaqqiyatli ciqdingiz `);
+// const user = {
+//     name: 'Gulshanoy',
+//     age: 22,
+//     married: false,
+//     email: 'gulshanoydilshodovna@gmail.com',
+//     location: 'Fergana',
+//     language: ['uzbek', 'russian', 'english'],
+//     login: function(){
+//         console.log(`Hurmatli ${user.name}, siz bu saytga muvaffaqqiyatli kirdingiz! `);
+//     },
+//     logout: function(){
+//         console.log(`Hurmatli ${user.name}, siz bu saytdan muvaffaqqiyatli chiqdingiz `);
+//     }
+// }
+// console.log(user.logout())
+
+// 3-amaliy mashg`ulot (21.07.2022)
+//1-task for orqali
+// let massiv = [[false, true], [1,2], 99, 'Gulshanoy']
+// for(i=0; i<massiv.length; i++){
+//     if(typeof massiv[i] == 'string'){
+//         console.log(i);
+//     }
+// }
+//1-task forEach orqali
+let massiv = [[false, true], [1,2], 99, 'Gulshanoy']
+massiv.forEach((item, i)=>{
+    if(typeof item == 'string'){
+        console.log(i);
     }
-}
-console.log(user.logout())
+})
