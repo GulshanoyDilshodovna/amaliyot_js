@@ -106,9 +106,22 @@
 //     }
 // }
 //1-task forEach orqali
-let massiv = [[false, true], [1,2], 99, 'Gulshanoy']
-massiv.forEach((item, i)=>{
-    if(typeof item == 'string'){
-        console.log(i);
-    }
-})
+// let massiv = [[false, true], [1,2], 99, 'Gulshanoy']
+// massiv.forEach((item, i)=>{
+//     if(typeof item == 'string'){
+//         console.log(i);
+//     }
+// })
+//2-task 
+// let data = [[12,4,5], true, 76, [3,7,12], false, 'Gulshanoy']
+// let newData = []
+// data.forEach((item)=>{
+//     let key = Array.isArray(item)
+//     if(key){
+//       item.forEach((nbr)=>{
+//         newData.push(nbr)
+//       }) 
+//     }
+// })
+// console.log(newData);
+
