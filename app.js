@@ -133,3 +133,11 @@
 //     }
 // })
 // console.log(newData);
+//4-task
+// let word = 'salom'
+// let splitWord = word.split("").reverse()
+// let newWord = ''
+// splitWord.forEach((item)=>{
+//     newWord+=item
+// })
+// console.log(newWord);
