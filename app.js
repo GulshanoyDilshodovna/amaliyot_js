@@ -124,4 +124,12 @@
 //     }
 // })
 // console.log(newData);
-
+// 3-task
+// const data = [true, false, NaN, undefined, 'false', 0, 12, '', -0, null]
+// let newData  = []
+// data.forEach((item)=>{
+//     if(!item){
+//        newData.push(item)
+//     }
+// })
+// console.log(newData);
