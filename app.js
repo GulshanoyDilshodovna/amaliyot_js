@@ -160,8 +160,15 @@
 // let count = 0;
 // splitData = data.split("");
 // splitData.forEach((item, i) => {
-//   if (item == "a") {
+//   if (item == "a" || item == 'A) {
 //     count++;
 //   }
 // });
 // console.log(count);
+//8-task
+// let data = [12, 23, null, false, 'men', true, undefined]
+// let typeOfData = []
+// data.forEach((type)=>{
+//     typeOfData.push(typeof type)
+// })
+// console.log(typeOfData);
