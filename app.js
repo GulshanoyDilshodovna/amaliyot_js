@@ -141,3 +141,12 @@
 //     newWord+=item
 // })
 // console.log(newWord);
+//5-task 
+// let newData = ''
+// let data = prompt("Biror nima deb yozing: ")
+// let splitData = data.split(' ')
+// splitData.forEach((item)=>{
+//    let okData = item.charAt().toLowerCase() + item.slice(1).toUpperCase()
+//    newData+=' '+okData
+// })
+// console.log(newData);
