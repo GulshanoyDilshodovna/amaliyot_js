@@ -183,3 +183,10 @@
 //9-task 2-path
 // let word = 'berilgan matn'
 // console.log(word.lastIndexOf(word.slice(-1))+1)
+//10-task
+// let nbrs = [1,4,8,23]
+// let newNbrs = []
+// nbrs.forEach((nbr, i)=>{
+//     newNbrs.push(nbr+i)
+// })
+// console.log(newNbrs);
