@@ -210,3 +210,20 @@
 // newArray.push(-1*nbr)
 // })
 // console.log(newArray);
+//14-task
+// let result = []
+// const fizzBuzz = function(nbr){
+//     for(let i=1; i<=nbr; i++){
+//         if(i%3==0 && i%5==0){
+//            result.push('FizzBuzz')
+//         }else if(i%3==0){
+//             result.push('Fizz')
+//         }else if(i%5==0){
+//             result.push('Buzz')
+//         }else{
+//             result.push(i);
+//         }
+//     }
+// }
+// fizzBuzz(25)
+// console.log(result);
