@@ -203,3 +203,10 @@
 //     result.push(n*i+1)
 // }
 // console.log(result);
+//13-task
+// let array = [2,84,65,1234,55]
+// let newArray = []
+// array.forEach((nbr)=>{
+// newArray.push(-1*nbr)
+// })
+// console.log(newArray);
