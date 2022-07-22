@@ -227,3 +227,25 @@
 // }
 // fizzBuzz(25)
 // console.log(result);
+//15-task
+let person ={
+    name: 'Gulshanoy',
+    lastName: 'Shokirova',
+    age: 22,
+    job: 'developer',
+    isMarried: false,
+    location: 'Fergana',
+    study: 'FSU',
+    about: function(){
+        return `    Assalomu alaykum, men ${this.name} ${this.lastName} ${this.age} yoshdaman. ${this.location}danman, ${this.job} bo'lib faoliyat yuritaman, hozirda ${this.study}da o'qiyman. ${this.isMarried ? 'Turmushga chiqganman' : 'Turmushga chiqmaganman'}`
+    }
+}
+console.log(person.about());
+
+
+
+
+
+
+
+
