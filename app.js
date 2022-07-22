@@ -196,3 +196,10 @@
 //     count+=i
 // }
 // console.log(count)
+//12-task
+// let result = []
+// let n = +prompt("Biror natural son kiriting: ")
+// for(let i =1 ; i<=10 ; i++){
+//     result.push(n*i+1)
+// }
+// console.log(result);
