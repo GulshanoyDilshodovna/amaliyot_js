@@ -284,15 +284,9 @@ const addRemove = function(){
     overlay.classList.remove('hide')
     modal.classList.remove('hide')
 }
-showBtn.addEventListener('click', ()=>{
-   addRemove()
-})
-closeBtn.addEventListener('click', ()=>{
-    addHide()
-})
-overlay.addEventListener('click', ()=>{
-    addHide()
-})
+showBtn.addEventListener('click', addRemove)
+closeBtn.addEventListener('click', addHide)
+overlay.addEventListener('click', addHide)
 document.addEventListener('keydown',(e)=>{
     if(e.key == 'Escape'){
         addHide()
