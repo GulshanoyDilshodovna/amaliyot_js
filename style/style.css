@@ -82,6 +82,7 @@ body{
     justify-content: center;
 }
 #modal{
+    z-index: 10;
     font-family: 'Roboto', sans-serif;
     max-width: 350px;
     width: 100%;

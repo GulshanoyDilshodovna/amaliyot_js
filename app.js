@@ -260,18 +260,35 @@
 //     child.classList.add('children_style')
 // })
 
-let items = document.querySelectorAll('li')
-items.forEach((item)=>{
-    item.addEventListener('click', (e)=>{
-        e.target.style.textDecoration = 'line-through'
-        e.target.style.opacity = '0.6'
-        let text = item.textContent
-        console.log(text);
-    })
+// let items = document.querySelectorAll('li')
+// items.forEach((item)=>{
+//     item.addEventListener('click', (e)=>{
+//         e.target.style.textDecoration = 'line-through'
+//         e.target.style.opacity = '0.6'
+//         let text = item.textContent
+//         console.log(text);
+//     })
+// })
+
+const showBtn = document.querySelector('#show__btn')
+const    closeBtn = document.querySelector('.close__btn')
+const    modal = document.querySelector('#modal')
+const   overlay = document.querySelector('#overlay') 
+showBtn.addEventListener('click', ()=>{
+    overlay.classList.remove('hide')
+    modal.classList.remove('hide')
 })
-
-
-
-
-
-
+closeBtn.addEventListener('click', ()=>{
+    overlay.classList.add('hide')
+    modal.classList.add('hide')
+})
+overlay.addEventListener('click', ()=>{
+    overlay.classList.add('hide')
+    modal.classList.add('hide')
+})
+document.addEventListener('keydown',(e)=>{
+    if(e.key == 'Escape'){
+    overlay.classList.add('hide')
+    modal.classList.add('hide')
+}
+})
