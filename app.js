@@ -274,21 +274,27 @@ const showBtn = document.querySelector('#show__btn')
 const    closeBtn = document.querySelector('.close__btn')
 const    modal = document.querySelector('#modal')
 const   overlay = document.querySelector('#overlay') 
-showBtn.addEventListener('click', ()=>{
-    overlay.classList.remove('hide')
-    modal.classList.remove('hide')
-})
-closeBtn.addEventListener('click', ()=>{
-    overlay.classList.add('hide')
-    modal.classList.add('hide')
-})
-overlay.addEventListener('click', ()=>{
-    overlay.classList.add('hide')
-    modal.classList.add('hide')
-})
-document.addEventListener('keydown',(e)=>{
-    if(e.key == 'Escape'){
+// ADD CLASSLIST HIDE
+const addHide = function(){
     overlay.classList.add('hide')
     modal.classList.add('hide')
 }
+// ADD CLASSLIST REMOVE
+const addRemove = function(){
+    overlay.classList.remove('hide')
+    modal.classList.remove('hide')
+}
+showBtn.addEventListener('click', ()=>{
+   addRemove()
+})
+closeBtn.addEventListener('click', ()=>{
+    addHide()
+})
+overlay.addEventListener('click', ()=>{
+    addHide()
+})
+document.addEventListener('keydown',(e)=>{
+    if(e.key == 'Escape'){
+        addHide()
+    }
 })
