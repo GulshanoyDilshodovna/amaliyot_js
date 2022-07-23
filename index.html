@@ -5,32 +5,31 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Amaliyot | Gulshanoy (18.07.2022)</title>
-    <link rel="stylesheet" href="style.css">
+    <!--NORMALIZE CSS-->
+    <link rel="stylesheet" href="style/normalize.css">
+    <!--STYLE CSS-->
+    <link rel="stylesheet" href="style/style.css">
+    <!--FONT AWESOME CDN JS-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
-    <h1>JavaScript</h1>
-    <!-- <div>
-        <p>Lorem ipsum success dolor sit amet.</p>
-        <p>Lorem ipsum error dolor sit amet.</p>
-        <p>Lorem ipsum  dolor sit amet.</p>
-        <p>Lorem ipsum  dolor sit amet.</p>
-        <p>Lorem ipsum success dolor sit amet.</p>
-        <a href="https://www.google.com">Google</a> <br>
-        <span>Hammaga salom</span>
-        <h3>Bu sarlavha</h3>
-        <i>og'ma yozuv</i>
-    </div> -->
-    <div class="todo">
-        <h2>To Do</h2>
-    <ul>
-        <li>Reading books </li>
-        <li>Cleaning rooms</li>
-        <li>Making cook</li>
-        <li>Writing codes</li>
-        <li>Watching videos</li>
-    </ul>
-    <button>Click me</button>
+    <div class="wrapper">
+        <button class="btn show " id="show__btn">Show Modal</button>
+        <div id="modal" class="hide">
+            <div id="modal__head">
+                <p>This is modal</p>
+                <span class="btn close__btn">
+                    <i class="fas fa-close"></i>
+                </span>
+            </div>
+            <div id="modal__body">
+                <p class="modal__title">This is modal title</p>
+                <p class="modal__content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet, doloribus. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cum accusantium adipisci totam iure mollitia vel  </p>
+            </div>
+        </div>
     </div>
+    <!-- <div class="overlay" id="overlay"></div> -->
+       <!--JAVASCRIPT-->
     <script src="app.js"></script>
 </body>
 </html>
