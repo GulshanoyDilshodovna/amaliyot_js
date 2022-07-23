@@ -244,17 +244,31 @@
 
 
 // --------SELECTORS ------------//
-let paragraphs = document.querySelectorAll('p')
-paragraphs.forEach((paragraph)=>{
-    if(paragraph.textContent.includes("error")){
-        paragraph.classList.add('error')
-    }else if(paragraph.textContent.includes("success")){
-        paragraph.classList.add('success')
-    }else{
-        paragraph.classList.add('dark')
-    }
-})
+// let paragraphs = document.querySelectorAll('p')
+// paragraphs.forEach((paragraph)=>{
+//     if(paragraph.textContent.includes("error")){
+//         paragraph.classList.add('error')
+//     }else if(paragraph.textContent.includes("success")){
+//         paragraph.classList.add('success')
+//     }else{
+//         paragraph.classList.add('dark')
+//     }
+// })
+// HTMLCollection ni Array ga o'tkazish va biror div ichidagi farzandlarini ushlash
+// let div  = document.querySelector('div')
+// Array.from(div.children).forEach((child)=>{
+//     child.classList.add('children_style')
+// })
 
+let items = document.querySelectorAll('li')
+items.forEach((item)=>{
+    item.addEventListener('click', (e)=>{
+        e.target.style.textDecoration = 'line-through'
+        e.target.style.opacity = '0.6'
+        let text = item.textContent
+        console.log(text);
+    })
+})
 
 
 
