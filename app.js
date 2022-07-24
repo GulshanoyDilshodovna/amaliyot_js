@@ -325,25 +325,62 @@
 // })    
 
 //-------------------   KEY CODE -------------------//
-const wrapper = document.getElementById('wrapper')
-window.addEventListener('keydown', (e)=>{
-    wrapper.innerHTML = `
-    <div class="key">
-    ${e.key == ' ' ? 'Space' :  e.key }
-    <small>event.Key</small>
-    </div>
-    <div class="key">
-    ${e.keyCode}
-    <small>event.keyCode</small>
-    </div>
-    <div class="key">
-    ${e.code}
-        <small>event.code</small>
-    </div>
+// const wrapper = document.getElementById('wrapper')
+// window.addEventListener('keydown', (e)=>{
+//     wrapper.innerHTML = `
+//     <div class="key">
+//     ${e.key == ' ' ? 'Space' :  e.key }
+//     <small>event.Key</small>
+//     </div>
+//     <div class="key">
+//     ${e.keyCode}
+//     <small>event.keyCode</small>
+//     </div>
+//     <div class="key">
+//     ${e.code}
+//         <small>event.code</small>
+//     </div>
+//     `
+// })
 
 
-    `
-})
+
+
+
+//--------------------Random Gradient Color--------------------------//
+const randomBtn = document.querySelector('.wrapper')
+const colorText = document.querySelector('.color__text')
+const body = document.querySelector('body')
+const values = ['0','1','2','3','4','5','6','7','8','9','a','b','c','d','e','f']
+//random color function
+function getGradien(){
+    let color = '#'
+    for(let i=0; i<6; i++){
+        let randomNbr = Math.trunc(Math.random()*values.length)
+        color+=values[randomNbr]
+    }
+    return color
+}
+//set color two body
+function setGradient(){
+    let color1 = getGradien()
+    let color2 = getGradien()
+    let color3 = getGradien()
+    let deg = Math.trunc(Math.random()*360 + 1)
+    let bg = `linear-gradient(${deg}deg, ${color1},${color2}, ${color3})`
+    body.style.backgroundImage = bg
+    colorText.innerHTML = bg
+}
+setGradient()
+randomBtn.addEventListener('click',setGradient)
+
+
+
+
+
+
+
+
 
 
 

@@ -211,7 +211,7 @@ button{
 } */
 
 /*------------KEY EVENTS || GET KEY CODE ----------------*/
-.wrapper {
+/* .wrapper {
     height: 100vh;
     min-width: 300px;
     width: 100%;
@@ -246,9 +246,65 @@ button{
 }
 .key {
     display: flex;
+} */
+
+
+
+
+
+
+/*====================RANDOM GRADIENT COLOR==================================*/
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;800;900&display=swap');
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-image: linear-gradient(43deg, #4158d0, #c850c0, #ffcc70);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 100vh;
+    color: #fff;
+    line-height: 1.2;
+    position: relative;
+    margin: 1rem;
 }
-
-
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(220,220,220,0.5);
+    border-radius: 0.5rem;
+    padding: 12px 16px;
+    align-items: center;
+    justify-content: center;
+    user-select: none;
+    transition: all 0.3s;
+}
+.wrapper:active, .wrapper:hover{
+    cursor: pointer;
+    transform: scale(1.01);
+    -webkit-box-shadow: 4px 4px 14px 10px rgba(34, 60, 80, 0.2);
+    -moz-box-shadow: 4px 4px 14px 10px rgba(34, 60, 80, 0.2);
+    box-shadow: 4px 4px 14px 10px rgba(34, 60, 80, 0.2);
+}
+.wrapper h1{
+    font-weight: 500;
+}
+.copyright {
+    position: absolute;  
+    bottom: 50px;
+    color: #fff;
+    letter-spacing: 2px;
+    text-decoration: none;
+}
+@media (max-width: 450px){
+    .wrapper h1{
+        font-size: 24px;
+    }
+    .color__text{
+        font-size: 12px;
+    }
+}
 
 
 
