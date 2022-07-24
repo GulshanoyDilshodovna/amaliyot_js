@@ -173,6 +173,9 @@ button{
     color: red;
     transition: background 0.3s;
 }
+#username{
+    outline: none;
+}
 .btn:hover{
     border: 2px solid aqua;
     cursor: pointer;
@@ -194,8 +197,18 @@ button{
     color: orangered;
     padding: 1rem;
 }
-
-
+.error{
+    border: 2px solid tomato !important;
+    box-shadow: 3px 4px 29px 3px rgba(255,0,0,0.71);
+    -webkit-box-shadow: 3px 4px 29px 3px rgba(255,0,0,0.71);
+    -moz-box-shadow: 3px 4px 29px 3px rgba(255,0,0,0.71);
+}
+.success{
+    border: 2px solid greenyellow !important;
+    box-shadow: 3px 4px 29px 3px rgba(0,255,8,0.71);
+    -webkit-box-shadow: 3px 4px 29px 3px rgba(0,255,8,0.71);
+    -moz-box-shadow: 3px 4px 29px 3px rgba(0,255,8,0.71);
+}
 
 
 

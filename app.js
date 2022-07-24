@@ -301,13 +301,12 @@
 
 //      ------------------  FORM UCHUN  -------------------------
 const form = document.querySelector('#form')
-const input = document.querySelector('#username')
 const message = document.querySelector('#message')
-
+const regEX = /^[a-zA-Z0-9]{8,20}$/
+//regEX
 form.addEventListener('submit', (e)=>{
  e.preventDefault()
  let inputValue = form.username.value
- const regEX = /^[a-zA-Z0-9]{8,20}$/
  if(regEX.test(inputValue)){
     message.innerHTML = `Username muvaffaqqiyatli kiritildi!!!`
     message.classList.add('message')
@@ -316,7 +315,14 @@ form.addEventListener('submit', (e)=>{
     message.classList.add('message')
  }
 })
-    
+//live feedback
+form.addEventListener('keyup', (e)=>{
+    if(regEX.test(e.target.value)){
+        form.username.setAttribute('class','success')
+    }else{
+        form.username.setAttribute('class','error')
+    }
+})    
     
 // e.preventDefault();
 // let inputValue = form.username.value
