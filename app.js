@@ -300,37 +300,50 @@
 
 
 //      ------------------  FORM UCHUN  -------------------------
-const form = document.querySelector('#form')
-const message = document.querySelector('#message')
-const regEX = /^[a-zA-Z0-9]{8,20}$/
-//regEX
-form.addEventListener('submit', (e)=>{
- e.preventDefault()
- let inputValue = form.username.value
- if(regEX.test(inputValue)){
-    message.innerHTML = `Username muvaffaqqiyatli kiritildi!!!`
-    message.classList.add('message')
- }else{
-    message.textContent = `Kiritlgan ma'lumotlarni qayta tekshiring. Faqat lotin alifbosidagi katta-kichik harflar va arab raqamlaridan foydalaning!`
-    message.classList.add('message')
- }
-})
-//live feedback
-form.addEventListener('keyup', (e)=>{
-    if(regEX.test(e.target.value)){
-        form.username.setAttribute('class','success')
-    }else{
-        form.username.setAttribute('class','error')
-    }
-})    
-    
-// e.preventDefault();
-// let inputValue = form.username.value
+// const form = document.querySelector('#form')
+// const message = document.querySelector('#message')
 // const regEX = /^[a-zA-Z0-9]{8,20}$/
+// //regEX
+// form.addEventListener('submit', (e)=>{
+//  e.preventDefault()
+//  let inputValue = form.username.value
+//  if(regEX.test(inputValue)){
+//     message.innerHTML = `Username muvaffaqqiyatli kiritildi!!!`
+//     message.classList.add('message')
+//  }else{
+//     message.textContent = `Kiritlgan ma'lumotlarni qayta tekshiring. Faqat lotin alifbosidagi katta-kichik harflar va arab raqamlaridan foydalaning!`
+//     message.classList.add('message')
+//  }
+// })
+// //live feedback
+// form.addEventListener('keyup', (e)=>{
+//     if(regEX.test(e.target.value)){
+//         form.username.setAttribute('class','success')
+//     }else{
+//         form.username.setAttribute('class','error')
+//     }
+// })    
+
+//-------------------   KEY CODE -------------------//
+const wrapper = document.getElementById('wrapper')
+window.addEventListener('keydown', (e)=>{
+    wrapper.innerHTML = `
+    <div class="key">
+    ${e.key}
+    <small>event.Key</small>
+    </div>
+    <div class="key">
+    ${e.keyCode}
+    <small>event.keyCode</small>
+    </div>
+    <div class="key">
+    ${e.code}
+        <small>event.code</small>
+    </div>
 
 
-
-
+    `
+})
 
 
 
