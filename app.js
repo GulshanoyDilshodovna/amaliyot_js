@@ -270,25 +270,74 @@
 //     })
 // })
 
-const showBtn = document.querySelector('#show__btn')
-const    closeBtn = document.querySelector('.close__btn')
-const    modal = document.querySelector('#modal')
-const   overlay = document.querySelector('#overlay') 
-// ADD CLASSLIST HIDE
-const addHide = function(){
-    overlay.classList.add('hide')
-    modal.classList.add('hide')
-}
-// ADD CLASSLIST REMOVE
-const addRemove = function(){
-    overlay.classList.remove('hide')
-    modal.classList.remove('hide')
-}
-showBtn.addEventListener('click', addRemove)
-closeBtn.addEventListener('click', addHide)
-overlay.addEventListener('click', addHide)
-document.addEventListener('keydown',(e)=>{
-    if(e.key == 'Escape'){
-        addHide()
-    }
+
+
+// ----------MODAL YARATISH ----------- 
+// const showBtn = document.querySelector('#show__btn')
+// const    closeBtn = document.querySelector('.close__btn')
+// const    modal = document.querySelector('#modal')
+// const   overlay = document.querySelector('#overlay') 
+// // ADD CLASSLIST HIDE
+// const addHide = function(){
+//     overlay.classList.add('hide')
+//     modal.classList.add('hide')
+// }
+// // ADD CLASSLIST REMOVE
+// const addRemove = function(){
+//     overlay.classList.remove('hide')
+//     modal.classList.remove('hide')
+// }
+// showBtn.addEventListener('click', addRemove)
+// closeBtn.addEventListener('click', addHide)
+// overlay.addEventListener('click', addHide)
+// document.addEventListener('keydown',(e)=>{
+//     if(e.key == 'Escape'){
+//         addHide()
+//     }
+// })
+
+
+
+
+//      ------------------  FORM UCHUN  -------------------------
+const form = document.querySelector('#form')
+const input = document.querySelector('#username')
+const message = document.querySelector('#message')
+
+form.addEventListener('submit', (e)=>{
+ e.preventDefault()
+ let inputValue = form.username.value
+ const regEX = /^[a-zA-Z0-9]{8,20}$/
+ if(regEX.test(inputValue)){
+    message.innerHTML = `Username muvaffaqqiyatli kiritildi!!!`
+    message.classList.add('message')
+ }else{
+    message.textContent = `Kiritlgan ma'lumotlarni qayta tekshiring. Faqat lotin alifbosidagi katta-kichik harflar va arab raqamlaridan foydalaning!`
+    message.classList.add('message')
+ }
 })
+    
+    
+// e.preventDefault();
+// let inputValue = form.username.value
+// const regEX = /^[a-zA-Z0-9]{8,20}$/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
