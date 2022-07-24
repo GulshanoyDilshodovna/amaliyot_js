@@ -329,7 +329,7 @@ const wrapper = document.getElementById('wrapper')
 window.addEventListener('keydown', (e)=>{
     wrapper.innerHTML = `
     <div class="key">
-    ${e.key}
+    ${e.key == ' ' ? 'Space' :  e.key }
     <small>event.Key</small>
     </div>
     <div class="key">
