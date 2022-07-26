@@ -299,30 +299,34 @@
 
 
 
-//      ------------------  FORM UCHUN  -------------------------
-// const form = document.querySelector('#form')
-// const message = document.querySelector('#message')
-// const regEX = /^[a-zA-Z0-9]{8,20}$/
-// //regEX
-// form.addEventListener('submit', (e)=>{
-//  e.preventDefault()
-//  let inputValue = form.username.value
-//  if(regEX.test(inputValue)){
-//     message.innerHTML = `Username muvaffaqqiyatli kiritildi!!!`
-//     message.classList.add('message')
-//  }else{
-//     message.textContent = `Kiritlgan ma'lumotlarni qayta tekshiring. Faqat lotin alifbosidagi katta-kichik harflar va arab raqamlaridan foydalaning!`
-//     message.classList.add('message')
-//  }
-// })
-// //live feedback
-// form.addEventListener('keyup', (e)=>{
-//     if(regEX.test(e.target.value)){
-//         form.username.setAttribute('class','success')
-//     }else{
-//         form.username.setAttribute('class','error')
-//     }
-// })    
+//      ------------------  FORM UCHUN || REGEX  -------------------------
+const form = document.querySelector('#form')
+const message = document.querySelector('#message')
+const regEX = /^[a-zA-Z0-9]{8,20}$/
+//regEX
+form.addEventListener('submit', (e)=>{
+ e.preventDefault()
+ let inputValue = form.username.value
+ if(regEX.test(inputValue)){
+    message.innerHTML = `Username muvaffaqqiyatli kiritildi!!!`
+    message.classList.add('message')
+ }else{
+    message.textContent = `Kiritlgan ma'lumotlarni qayta tekshiring. Faqat lotin alifbosidagi katta-kichik harflar va arab raqamlaridan foydalaning!`
+    message.classList.add('message')
+    setInterval(() => {
+        message.classList.remove('message')
+        message.innerHTML = ''
+    }, 4000);
+ }
+})
+//live feedback
+form.addEventListener('keyup', (e)=>{
+    if(regEX.test(e.target.value)){
+        form.username.setAttribute('class','success')
+    }else{
+        form.username.setAttribute('class','error')
+    }
+})    
 
 //-------------------   KEY CODE -------------------//
 // const wrapper = document.getElementById('wrapper')
@@ -467,6 +471,22 @@ console.log(getArray);*/
 //     console.log(`Hech qanday ism yo'q`);
 // }
 
+//====================SETTIMEOUT && SETINTERVAL============================//
+
+//setTimeout(function, time)
+// setTimeout(()=>{
+//     console.log(4);
+// },3000) //  3 sekunddan keyin function ishlaydi 
+
+//setInterval(function, time)
+let a = 0 
+const setTime =  setInterval(() => {
+    a++
+    console.log(a);
+}, 1000);
+setTimeout(()=>{
+    clearInterval(setTime) //intervalni to'xtatadi
+},5000)
 
 
 

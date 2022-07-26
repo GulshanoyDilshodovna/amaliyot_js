@@ -142,15 +142,14 @@ button{
 
 
 
-/*-----FORMA UCHUN STYLES-----*/
+/*-----FORMA UCHUN STYLES || REGEX-----*/
 *{
     box-sizing: border-box;
 }
-/* .wrapper{
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
     font-family: 'Roboto', sans-serif;
 }
 #form{
@@ -208,7 +207,7 @@ button{
     box-shadow: 3px 4px 29px 3px rgba(0,255,8,0.71);
     -webkit-box-shadow: 3px 4px 29px 3px rgba(0,255,8,0.71);
     -moz-box-shadow: 3px 4px 29px 3px rgba(0,255,8,0.71);
-} */
+} 
 
 /*------------KEY EVENTS || GET KEY CODE ----------------*/
 /* .wrapper {
