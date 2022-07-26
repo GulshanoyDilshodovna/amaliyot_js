@@ -441,6 +441,48 @@ words && console.log(`Hello, world`);
 
 
 
+/*=======================LOCALSTORAGE ========================= */
+//setItem
+/*const name = 'Gulshanoy'
+let age = 22
+localStorage.setItem('name', name)
+localStorage.setItem('age', age)
+//getItem
+console.log(localStorage.getItem('age'))
+//clear
+localStorage.clear()*/
+
+/*let names = ["Gulshanoy", "Oyxon", 'Lolaxon']
+localStorage.setItem('names', JSON.stringify(names))
+let getArray = JSON.parse(localStorage.getItem('names'))
+console.log(getArray);*/
+
+// let names = JSON.parse(localStorage.getItem('names')) ?  JSON.parse(localStorage.getItem('names')) : []
+
+// if(names.length>0){
+//     names.forEach((name)=>{
+//         console.log(name);
+//     })
+// }else{
+//     console.log(`Hech qanday ism yo'q`);
+// }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
