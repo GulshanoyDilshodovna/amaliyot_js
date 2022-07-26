@@ -489,55 +489,25 @@ console.log(getArray);*/
 // },5000)
 
 //=========COUNTER || SETTIMEOUT() AND SETINTERVAL()==============//
-const nbr =document.getElementById('nbr'),
+const countEl =document.getElementById('nbr'),
     startBtn = document.querySelector('.start__btn'),
     pauseBtn = document.querySelector('.pause__btn');
-let counterInterval,
-    counter = 0,
-    count = true;
-startBtn.addEventListener('click', ()=>{
-    nbr.style.color = 'green'
-    if (count) {
-        counterInterval = setInterval(() => {
-            counter++
-            nbr.textContent = counter
-        }, 1000)
+let count  = true,
+    timeInterval,
+    counter = 0;
+function start(){
+    if(count){
+        timeInterval = setInterval(() => {
+        counter++
+        countEl.textContent = counter
+        }, 1000);
         count = !count
+        countEl.style.color = 'green'
     }
-}) 
-pauseBtn.addEventListener('click', ()=>{
-    nbr.style.color = '#222'
-    clearInterval(counterInterval)
+} 
+function pause(){
+    clearInterval(timeInterval)
     count = !count
-})    
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+}
+startBtn.addEventListener('click', start)
+pauseBtn.addEventListener('click', pause)
