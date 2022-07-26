@@ -346,7 +346,7 @@
 
 
 
-
+/*
 //--------------------Random Gradient Color--------------------------//
 const randomBtn = document.querySelector('.wrapper')
 const colorText = document.querySelector('.color__text')
@@ -373,11 +373,70 @@ function setGradient(){
 }
 setGradient()
 randomBtn.addEventListener('click',setGradient)
+*/
+
+/*
+//==================ARRAY======================//
+const movies = [
+    {name: 'Avatar 3D', year: 2008, rating:9},
+    {name: 'Titanik 4D', year: 1997, rating:7},
+    {name: 'Forsaj 3D', year: 2020, rating:4},
+    {name: 'Avengers', year: 2012, rating:6},
+]
+//forEach orqali
+let newMovies = []
+movies.movies.forEach(movie => {
+    if(movie.year>2010){
+        newMovies.push(movie)
+    }
+});
+console.log(newMovies);
+
+//filter methodi orqali
+const filterMovies = movies.filter((movie)=>{
+    return movie.year>2010
+})
+console.log(filterMovies);
+
+//map method
+nbrs = [1,2,3,4,5]
+let mapNbrs = nbrs.map((nbr)=>{
+    return nbr ** 2
+})
+console.log(mapNbrs);
+
+// sort method
+const names = ['Gulshanoy', 'Oyxon', 'Asalxon', 'Lolaxon']
+const sortedNames = names.sort()
+console.log(sortedNames);
+
+const nbrs = [1,8,75,9,7]
+const sortedNbrs = nbrs.sort((a,b)=>{
+    return a-b
+    //return b-a kmayish tartibida 
+})
+console.log(sortedNbrs);
+*/
 
 
 
-
-
+/*
+//TERNARY OPERATION
+const age = +prompt('Yoshingizni kiriting: ',18)
+//if else orqali
+if(age<18){
+    alert(`Siz hali voyaga yetmagansiz`);
+}else{
+    alert(`Siz voyaga yetgansiz`);
+}
+// ternary operation
+age<18 ? alert(`Siz hali voyaga yetmagansiz`):alert(`Siz voyaga yetgansiz`)
+*/
+/*
+// && 
+const words = [1,2,3].length
+words && console.log(`Hello, world`);
+*/
 
 
 
