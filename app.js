@@ -492,17 +492,25 @@ console.log(getArray);*/
 const nbr =document.getElementById('nbr'),
     startBtn = document.querySelector('.start__btn'),
     pauseBtn = document.querySelector('.pause__btn');
-let timeInterval;
+let counterInterval,
+    counter = 0,
+    count = true;
 startBtn.addEventListener('click', ()=>{
     nbr.style.color = 'green'
-    timeInterval = setInterval(() => {
-        nbr.textContent  ++ 
-    }, 500);
+    if (count) {
+        counterInterval = setInterval(() => {
+            counter++
+            nbr.textContent = counter
+        }, 1000)
+        count = !count
+    }
 }) 
 pauseBtn.addEventListener('click', ()=>{
     nbr.style.color = '#222'
-   clearInterval(timeInterval)
-})      
+    clearInterval(counterInterval)
+    count = !count
+})    
+
 
 
 
