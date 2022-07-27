@@ -308,7 +308,7 @@ body {
 
 
 /*================COUNTER || SETTIMEOUT() AND SETINTERVAL()==================*/
-.wrapper {
+/* .wrapper {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -340,7 +340,100 @@ body {
 .btn:hover{
     background-color: #fff;
     transform: scale(1.01);
+} */
+
+
+
+/*==================PING PONG GAME=====================*/
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;800;900&display=swap');
+body{
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(../images/ping-pong__bg.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
 }
+.wrapper {
+    font-family: 'Montserrat', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 400px;
+    color: aqua;
+    background-color: #fff;
+    padding: 1rem;
+    border-radius: 0.5rem;
+}
+.img {
+    width: 250px;
+}
+.result{
+    font-size: 3rem;
+}
+.select{
+    font-size: 20px;
+    width: 60px;
+    height: 30px;
+    border: 1px solid #bbb;
+    border-radius: 4px;
+    padding: 0 6px;
+    outline: none;
+    color: aqua;
+    transition: 0.3s;
+    background-color: #7b7777;
+    font-weight: bold;
+}
+.select:hover{
+    transform: scale(1.02);
+    cursor: pointer;
+    background-color: #fff;
+}
+.btn {
+    border-radius: 4px;
+    font-size: 20px;
+    padding: 10px 18px;
+    margin: 10px;
+    border: 1px solid #bbb;
+    outline: none;
+    color: #eee;
+    text-transform: capitalize;
+    font-weight: bold;
+    transition: all 0.3s;
+}
+#player-one__btn{
+    background-color: green;
+    width: 140px;
+}
+#player-two__btn{
+    background-color: blue;
+    width: 140px;
+}
+#reset__btn{
+    background-color: red;
+    width: 300px;
+}
+.btn:hover{
+    transform: scale(1.02);
+    cursor: pointer;
+}
+#player-one__btn:hover{
+    background-color: #eee;
+    color: green;
+}
+#player-two__btn:hover{
+    background-color: #eee;
+    color: blue;
+}
+#reset__btn:hover{
+    color: red;
+    background-color: #eee;
+}
+
 
 
 

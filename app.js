@@ -489,25 +489,28 @@ console.log(getArray);*/
 // },5000)
 
 //=========COUNTER || SETTIMEOUT() AND SETINTERVAL()==============//
-const countEl =document.getElementById('nbr'),
-    startBtn = document.querySelector('.start__btn'),
-    pauseBtn = document.querySelector('.pause__btn');
-let count  = true,
-    timeInterval,
-    counter = 0;
-function start(){
-    if(count){
-        timeInterval = setInterval(() => {
-        counter++
-        countEl.textContent = counter
-        }, 1000);
-        count = !count
-        countEl.style.color = 'green'
-    }
-} 
-function pause(){
-    clearInterval(timeInterval)
-    count = !count
-}
-startBtn.addEventListener('click', start)
-pauseBtn.addEventListener('click', pause)
+// const countEl =document.getElementById('nbr'),
+//     startBtn = document.querySelector('.start__btn'),
+//     pauseBtn = document.querySelector('.pause__btn');
+// let count  = true,
+//     timeInterval,
+//     counter = 0;
+// function start(){
+//     if(count){
+//         timeInterval = setInterval(() => {
+//         counter++
+//         countEl.textContent = counter
+//         }, 1000);
+//         count = !count
+//         countEl.style.color = 'green'
+//     }
+// } 
+// function pause(){
+//     clearInterval(timeInterval)
+//     count = !count
+// }
+// startBtn.addEventListener('click', start)
+// pauseBtn.addEventListener('click', pause)
+
+
+//===============PING PONG GAME=================//
