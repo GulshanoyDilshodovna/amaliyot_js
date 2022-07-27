@@ -242,7 +242,6 @@
 // }
 // console.log(person.about());
 
-
 // --------SELECTORS ------------//
 // let paragraphs = document.querySelectorAll('p')
 // paragraphs.forEach((paragraph)=>{
@@ -270,13 +269,11 @@
 //     })
 // })
 
-
-
-// ----------MODAL YARATISH ----------- 
+// ----------MODAL YARATISH -----------
 // const showBtn = document.querySelector('#show__btn')
 // const    closeBtn = document.querySelector('.close__btn')
 // const    modal = document.querySelector('#modal')
-// const   overlay = document.querySelector('#overlay') 
+// const   overlay = document.querySelector('#overlay')
 // // ADD CLASSLIST HIDE
 // const addHide = function(){
 //     overlay.classList.add('hide')
@@ -295,9 +292,6 @@
 //         addHide()
 //     }
 // })
-
-
-
 
 //      ------------------  FORM UCHUN || REGEX  -------------------------
 // const form = document.querySelector('#form')
@@ -326,7 +320,7 @@
 //     }else{
 //         form.username.setAttribute('class','error')
 //     }
-// })    
+// })
 
 //-------------------   KEY CODE -------------------//
 // const wrapper = document.getElementById('wrapper')
@@ -346,9 +340,6 @@
 //     </div>
 //     `
 // })
-
-
-
 
 /*
 //--------------------Random Gradient Color--------------------------//
@@ -422,8 +413,6 @@ const sortedNbrs = nbrs.sort((a,b)=>{
 console.log(sortedNbrs);
 */
 
-
-
 /*
 //TERNARY OPERATION
 const age = +prompt('Yoshingizni kiriting: ',18)
@@ -441,9 +430,6 @@ age<18 ? alert(`Siz hali voyaga yetmagansiz`):alert(`Siz voyaga yetgansiz`)
 const words = [1,2,3].length
 words && console.log(`Hello, world`);
 */
-
-
-
 
 /*=======================LOCALSTORAGE ========================= */
 //setItem
@@ -476,10 +462,10 @@ console.log(getArray);*/
 //setTimeout(function, time)
 // setTimeout(()=>{
 //     console.log(4);
-// },3000) //  3 sekunddan keyin function ishlaydi 
+// },3000) //  3 sekunddan keyin function ishlaydi
 
 //setInterval(function, time)
-// let a = 0 
+// let a = 0
 // const setTime =  setInterval(() => {
 //     a++
 //     console.log(a);
@@ -504,7 +490,7 @@ console.log(getArray);*/
 //         count = !count
 //         countEl.style.color = 'green'
 //     }
-// } 
+// }
 // function pause(){
 //     clearInterval(timeInterval)
 //     count = !count
@@ -512,54 +498,90 @@ console.log(getArray);*/
 // startBtn.addEventListener('click', start)
 // pauseBtn.addEventListener('click', pause)
 
-
 //===============PING PONG GAME=================//
-const score1El = document.getElementById('score1'),
-    score2El = document.getElementById('score2'),
-    selectEl = document.getElementById('select'),
-    player1Btn = document.getElementById('player-one__btn'),
-    player2Btn = document.getElementById('player-two__btn'),
-    resetBtn = document.getElementById('reset__btn');
-let score1 = 0,
-score2 = 0,
-play = true,
-selectValue = selectEl.value;
-// function reset 
-function reset(){
-    score1 = score2 =0 
-    score1El.textContent = score2El.textContent = 0
-    score1El.style.color = score2El.style.color = 'aqua'
-    play= true
+// const score1El = document.getElementById('score1'),
+//     score2El = document.getElementById('score2'),
+//     selectEl = document.getElementById('select'),
+//     player1Btn = document.getElementById('player-one__btn'),
+//     player2Btn = document.getElementById('player-two__btn'),
+//     resetBtn = document.getElementById('reset__btn');
+// let score1 = 0,
+// score2 = 0,
+// play = true,
+// selectValue = selectEl.value;
+// // function reset
+// function reset(){
+//     score1 = score2 =0
+//     score1El.textContent = score2El.textContent = 0
+//     score1El.style.color = score2El.style.color = 'aqua'
+//     play= true
+// }
+// //function player 1 listener
+// function player1Listener(){
+//     if(play){
+//         score1++
+//         score1El.textContent = score1
+//         if(score1 == selectValue){
+//             score1El.style.color = 'green'
+//             score2El.style.color = 'red'
+//             play = false
+//         }
+//     }
+// }
+// //function player 2 listener
+// function player2Listener(){
+//     if(play){
+//         score2++
+//         score2El.textContent = score2
+//         if(score2 == selectValue){
+//             score1El.style.color = 'red'
+//             score2El.style.color = 'green'
+//             play = false
+//         }
+//     }
+// }
+// //add event listner
+// selectEl.addEventListener('change', ()=>{
+//     selectValue = selectEl.value
+//     reset()
+// })
+// resetBtn.addEventListener('click', reset)
+// player1Btn.addEventListener('click',player1Listener)
+// player2Btn.addEventListener('click',player2Listener)
+
+//==========NOW DATE || TIME || VAQT ANIQLAGICH===========//
+function timeShow() {
+  const day = document.getElementById("day"),
+    month = document.getElementById("month"),
+    year = document.getElementById("year"),
+    hours = document.getElementById("hours"),
+    minute = document.getElementById("minute"),
+    second = document.getElementById("second"),
+    now = new Date(),
+    months = [
+      "Jan",
+      "Feb",
+      "Mar",
+      "Apr",
+      "May",
+      "Jun",
+      "Jul",
+      "Aug",
+      "Sep",
+      "Oct",
+      "Nov",
+      "Dec",
+    ];
+  day.textContent = now.getDate() < 10 ? "0" + now.getDate() : now.getDate();
+  month.textContent = months[now.getMonth()];
+  year.textContent = now.getFullYear();
+  hours.textContent =
+    now.getHours() < 10 ? "0" + now.getHours() : now.getHours();
+  minute.textContent =
+    now.getMinutes() < 10 ? "0" + now.getMinutes() : now.getMinutes();
+  second.textContent =
+    now.getSeconds() < 10 ? "0" + now.getSeconds() : now.getSeconds();
 }
-//function player 1 listener 
-function player1Listener(){
-    if(play){
-        score1++
-        score1El.textContent = score1
-        if(score1 == selectValue){
-            score1El.style.color = 'green'
-            score2El.style.color = 'red'
-            play = false
-        }
-    }
-}
-//function player 2 listener 
-function player2Listener(){
-    if(play){
-        score2++
-        score2El.textContent = score2
-        if(score2 == selectValue){
-            score1El.style.color = 'red'
-            score2El.style.color = 'green'
-            play = false
-        }
-    }
-}
-//add event listner 
-selectEl.addEventListener('change', ()=>{
-    selectValue = selectEl.value
-    reset()
-})
-resetBtn.addEventListener('click', reset)
-player1Btn.addEventListener('click',player1Listener)
-player2Btn.addEventListener('click',player2Listener)
+setInterval(() => {
+    timeShow()
+}, 1000);
