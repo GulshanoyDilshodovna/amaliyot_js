@@ -1,4 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;800;900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;200;300;400;500;600;800;900&display=swap');
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
 /* body{
     background-color: #85FFBD;
     background-image: linear-gradient(45deg, #85FFBD 0%, #FFFB7D 100%);
@@ -59,6 +66,8 @@ button{
     border: 1px solid red;
     border-radius: .5rem;
 } */
+
+
 
 
 
@@ -142,10 +151,11 @@ button{
 
 
 
+
+
+
+
 /*-----FORMA UCHUN STYLES || REGEX-----*/
-*{
-    box-sizing: border-box;
-}
 /*body{
     display: flex;
     align-items: center;
@@ -253,7 +263,6 @@ button{
 
 
 /*====================RANDOM GRADIENT COLOR==================================*/
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;800;900&display=swap');
 /*
 body {
     font-family: 'Montserrat', sans-serif;
@@ -307,6 +316,10 @@ body {
 */
 
 
+
+
+
+
 /*================COUNTER || SETTIMEOUT() AND SETINTERVAL()==================*/
 /* .wrapper {
     display: flex;
@@ -344,8 +357,10 @@ body {
 
 
 
+
+
+
 /*==================PING PONG GAME=====================*/
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;800;900&display=swap');
 /* body{
     background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(../images/ping-pong__bg.jpg);
     background-position: center;
@@ -436,8 +451,10 @@ body {
 
 
 
+
+
 /*==========NOW DATE || TIME || VAQT ANIQLAGICH===========*/
-.wrapper{
+/* .wrapper{
     font-family: 'Montserrat', sans-serif;
     display: flex;
     align-items: center;
@@ -460,10 +477,121 @@ body {
     padding: 6px 12px;
     font-size: 30px;
     font-weight: normal;
+} */
+
+
+
+
+
+/*ROLL DICE GAME STYLES*/
+body {
+  font-family: 'Montserrat', sans-serif;
+  display: flex;
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+  background-color: #85FFBD;
+    background-image: linear-gradient(45deg, #85FFBD 0%, #FFFB7D 100%);
+
 }
-
-
-
+.wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+.player__div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    width: 350px;
+    height: 450px;
+    box-shadow: 0px 0px 20px rgba(33, 220, 142, 0.8);
+    padding: 10px 18px;
+    text-align: center;
+    color: #006400;
+}
+.player0{
+    background-image: linear-gradient( 135deg, #F0FF00 10%, #92FFC0 100%);
+    border-radius: 0.5rem 0 0  0.5rem;
+}
+.player1 {
+    background-image: linear-gradient( 135deg, #FFF720 10%, #3CD500 100%);
+    border-radius: 0 0.5rem 0.5rem 0;
+}
+.title{
+    font-weight: normal;
+    font-size: 2rem;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+.score0, .score1 {
+    font-size: 3rem;
+    font-weight: normal;
+}
+.current-div {
+    border-radius: 0.5rem;
+    background-image: linear-gradient(120deg, #d4fc79 0%, #a5fbb1 100%);
+    box-shadow: 0px 0px 20px rgba(33, 220, 142, 0.8);
+    padding: 10px 18px;
+    text-align: center;
+    width: 200px;
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+.current {
+    text-transform: uppercase;
+    font-size: 20px;
+}
+.player__active{
+    background-image: linear-gradient(45deg, #51de80 0%, #86df26 100%);
+}
+.account1, .account2{
+    font-size:1.5rem ;
+}
+.btn {
+    border: 1px solid #006400;
+    border-radius: 0.5rem;
+    padding: 6px 12px;
+    text-transform: capitalize;
+    color: green;
+    background-image: radial-gradient( circle farthest-corner at 50.7% 54%,  rgba(204,254,152,1) 0%, rgba(229,253,190,1) 92.4% );
+    transition: background 0.3s;
+}
+.btn:hover{
+    cursor: pointer;
+    transform: scale(1.05);
+    color: #006400;
+}
+.reset__btn {
+    position: absolute;
+    top: 15%;
+    left: 41%;
+}
+.dice__btn {
+    position: absolute;
+    top: 65%;
+    left: 42%;
+}
+.hold__btn {
+    position: absolute;
+    top: 75%;
+    left: 45%;
+}
+.img{
+    position: absolute;
+    left: 40%;
+    top: 30%;
+    width: 120px;
+    border-radius: 1rem;
+}
+.winner{
+    background-image: radial-gradient( circle farthest-corner at 50.7% 54%,  greenyellow 10%, green 92.4% );
+}
 
 
 
