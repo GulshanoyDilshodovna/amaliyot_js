@@ -667,30 +667,46 @@ console.log(getArray);*/
 
 
 //============CALCULATOR============//
-const screen = document.getElementById('screen')
-const equal = document.querySelector('.btn-equal')
-const clear = document.querySelector('.btn-clear')
-const buttons = document.querySelectorAll('.btn')
+// const screen = document.getElementById('screen')
+// const equal = document.querySelector('.btn-equal')
+// const clear = document.querySelector('.btn-clear')
+// const buttons = document.querySelectorAll('.btn')
 
-//BUTTONS CLICK
-buttons.forEach((button)=>{
-    button.addEventListener('click', (e)=>{
-        let value = e.target.dataset.num
-        screen.value +=value
-    })
-})
+// //BUTTONS CLICK
+// buttons.forEach((button)=>{
+//     button.addEventListener('click', (e)=>{
+//         let value = e.target.dataset.num
+//         screen.value +=value
+//     })
+// })
 
-//EQUAL BUTTON CLICK
-equal.addEventListener('click', (e)=>{
-    if(screen.value === ''){
-       screen.value  = "please";
-    }else{
-       let answer = eval(screen.value);
-        screen.value = answer
-    }
-})
+// //EQUAL BUTTON CLICK
+// equal.addEventListener('click', (e)=>{
+//     if(screen.value === ''){
+//        screen.value  = "please";
+//     }else{
+//        let answer = eval(screen.value);
+//         screen.value = answer
+//     }
+// })
 
-//CLEAR BUTTON CLICK
-clear.addEventListener('click', (e)=>{
-    screen.value = ''
-})
+// //CLEAR BUTTON CLICK
+// clear.addEventListener('click', (e)=>{
+//     screen.value = ''
+// })
+
+
+
+
+
+
+
+
+//=======CREATE PRODUCT SEARCH=======//
+const search = ()=>{
+    // const searchBox = document.getElementById('search').ariaValueMax.toUpperCase()
+    const storeItems = document.getElementById('product-lis')
+    const product = document.querySelectorAll('.product-item')
+    const productName = document.querySelectorAll('.product-name')
+
+}
