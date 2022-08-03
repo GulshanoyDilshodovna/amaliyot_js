@@ -671,7 +671,7 @@ overflow: hidden;
 /*=======CREATE PRODUCT SEARCH=======*/
 @import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@100;200;300;400;500;600;800;900&display=swap');
 
-body {
+/* body {
   font-family: 'Source Sans Pro', sans-serif;
   width: 100%;
   height: 100vh;
@@ -746,11 +746,55 @@ body {
     font-size: 18px;
     margin: 2px 0;
     color: #1d1d1d;
+} */
+
+
+
+
+
+/*==========VANILLA JAVASCRIPT SMOOTH SCROLL TUTORIAL=============*/
+/* .wrapper {
+    font-family: 'Roboto', sans-serif;
 }
+.box1 {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: lightblue;
+}
+.link1, .link2 {
+    color: orangered;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 500;
+    letter-spacing: 2px;
+}
+.box2 {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+} */
 
 
 
 
+
+/**/
+body{
+    font-family: 'Roboto', sans-serif;
+    background-color: #000;
+}
+p{
+    width: 200px;
+    height: 70px;
+    background-color: #fff;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 50px;
+}
 
 
 

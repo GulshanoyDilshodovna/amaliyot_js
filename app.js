@@ -702,25 +702,72 @@ console.log(getArray);*/
 
 
 
-//=======CREATE PRODUCT SEARCH=======//
-const search = ()=>{
-    const searchBox = document.getElementById('search').value.toUpperCase()
-    const storeItems = document.getElementById('product-lis')
-    const product = document.querySelectorAll('.product-item')
-    const productName = document.getElementsByTagName('h2')
+//=======CREATE PRODUCT SEARCH=======//  !!!!!ISHLAMADI!!!!!!
+// const search = ()=>{
+//     const searchBox = document.getElementById('search').value.toUpperCase()
+//     const storeItems = document.getElementById('product-lis')
+//     const product = document.querySelectorAll('.product-item')
+//     const productName = document.getElementsByTagName('h2')
 
-    for(let i=0; i<productName.length; i++){
-        let match = product[i].getElementsByTagName('h2')[0]
+//     for(let i=0; i<productName.length; i++){
+//         let match = product[i].getElementsByTagName('h2')[0]
 
-        if(match){
-            let textValue = match.innerHTML || match.textContent
+//         if(match){
+//             let textValue = match.innerHTML || match.textContent
 
-            if(textValue.toUpperCase().indexOf(searchBox)>-1){
-                product[i].style.display = ''
-            }else{
-                product[i].style.display = 'none'
-            }
-        }
+//             if(textValue.toUpperCase().indexOf(searchBox)>-1){
+//                 product[i].style.display = ''
+//             }else{
+//                 product[i].style.display = 'none'
+//             }
+//         }
 
-    }
+//     }
+// }
+
+
+
+
+
+
+
+//==========VANILLA JAVASCRIPT SMOOTH SCROLL TUTORIAL=============//
+// function smoothScroll(target, duration){
+//     var target = document.querySelector(target)
+//     var targetPosition = target.getBoundingClientRect().top
+//     var startPosition = window.pageYOffset()
+//     var distance = targetPosition-startPosition
+    
+//     console.log(targetPosition);
+// }
+
+// smoothScroll('#link1', 1000)
+
+
+
+
+
+
+
+////
+let startMinute= 10
+let time = startMinute*60
+const countdownEl =  document.getElementById('countdown')
+setInterval(updateCountdown, 1000)
+
+function updateCountdown(){
+    let minute = Math.floor(time/60)
+    let second = time%60
+    second = second<10? '0'+second : second
+    countdownEl.innerHTML = `${minute}:${second}`
+    time--
 }
+
+
+
+
+
+
+
+
+
