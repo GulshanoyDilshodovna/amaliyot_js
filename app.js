@@ -749,18 +749,22 @@ console.log(getArray);*/
 
 
 
-////
-let startMinute= 10
-let time = startMinute*60
+//=======Simple Countdown Timer with JavaScript======//
+let startMinute= 01
+let time = startMinute*60 //second value
 const countdownEl =  document.getElementById('countdown')
-setInterval(updateCountdown, 1000)
+let setIntevalName = setInterval(updateCountdown, 1000)
 
 function updateCountdown(){
     let minute = Math.floor(time/60)
     let second = time%60
     second = second<10? '0'+second : second
+    minute = minute<10? '0'+minute : minute
     countdownEl.innerHTML = `${minute}:${second}`
     time--
+    if(second == 0 && minute == 0){
+        clearInterval(setIntevalName)
+    }
 }
 
 

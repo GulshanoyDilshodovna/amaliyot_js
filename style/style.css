@@ -781,10 +781,14 @@ overflow: hidden;
 
 
 
-/**/
+/*======Simple Countdown Timer with JavaScript======*/
 body{
     font-family: 'Roboto', sans-serif;
     background-color: #000;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 p{
     width: 200px;
