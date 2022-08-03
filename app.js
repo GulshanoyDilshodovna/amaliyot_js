@@ -750,28 +750,114 @@ console.log(getArray);*/
 
 
 //=======Simple Countdown Timer with JavaScript======//
-let startMinute= 01
-let time = startMinute*60 //second value
-const countdownEl =  document.getElementById('countdown')
-let setIntevalName = setInterval(updateCountdown, 1000)
+// let startMinute= 10
+// let time = startMinute*60 //second value
+// const countdownEl =  document.getElementById('countdown')
+// let setIntevalName = setInterval(updateCountdown, 1000)
 
-function updateCountdown(){
-    let minute = Math.floor(time/60)
-    let second = time%60
-    second = second<10? '0'+second : second
-    minute = minute<10? '0'+minute : minute
-    countdownEl.innerHTML = `${minute}:${second}`
-    time--
-    if(second == 0 && minute == 0){
-        clearInterval(setIntevalName)
+// function updateCountdown(){
+//     let minute = Math.floor(time/60)
+//     let second = time%60
+//     second = second<10? '0'+second : second
+//     minute = minute<10? '0'+minute : minute
+//     countdownEl.innerHTML = `${minute}:${second}`
+//     time--
+//     if(second == 0 && minute == 0){
+//         clearInterval(setIntevalName)
+//     }
+// }
+
+
+
+
+
+//=======MUSIC PLAYER=======//
+//consts - o`zgarmaslar
+const audioContainer = document.getElementById('audio-container'),
+    playBtn  = document.getElementById('play'),
+    prevBtn  = document.getElementById('prev'),
+    nextBtn  = document.getElementById('next'),
+    title  = document.getElementById('title'),
+    audio = document.getElementById('audio'),
+    progressContainer = document.getElementById('progress-container'),
+    progress = document.getElementById('progress'),
+    cover = document.getElementById('cover'),
+    songs = ['Akbarali_Ochilov_Kelasanmi','Mustafo_Qirolicham '];
+//let - o`zgaruvchiar
+let songIndex = 0
+
+//functions - funksiyalar
+function loadSong(song){
+    title.innerHTML = song
+    audio.src = `./music/${song}.mp3`
+    cover.src = `./music_img/${song}.jpg`
+
+}
+loadSong(songs[songIndex])
+
+//play song function
+function playSong(){
+    audioContainer.classList.add('play')
+    playBtn.querySelector('i.fas').remove('fa-play')
+    playBtn.querySelector('i.fas').add('fa-pause')
+
+    audio.play()
+}
+//pause song function
+function pauseSong(){
+    audioContainer.classList.remove('play')
+    playBtn.querySelector('i.fas').add('fa-play')
+    playBtn.querySelector('i.fas').remove('fa-pause')
+
+    audio.pause()
+}
+//prev song function
+function prevSong(){
+    songIndex--
+    
+    if(songIndex<0){
+        songIndex = songs.length - 1
     }
+    loadSong(songs[songIndex])
+    playSong()
+}
+//next song function
+function nextSong(){
+    songIndex++
+    
+    if(songIndex>songs.length-1){
+        songIndex = 0
+    }
+    loadSong(songs[songIndex])
+    playSong()
+}
+// progress update function
+function progressUpdate(e){
+    const [duration, currentTime] = e.srcElement
+    const progressPercent = (currentTime/duration)*100
+    progress.style.width = `${progressPercent}%`
+}
+// set progress function
+function setProgress(e){
+    const width = this.clientWidth
+    const clickX = e.offsetX
+    const duration = audio.duration
+    audio.currentTime = (clickX / width)*duration
 }
 
-
-
-
-
-
-
-
-
+// events
+playBtn.addEventListener('click',()=>{
+    let = isPlaying = audioContainer.classList.contains('play')
+    if(isPlaying){
+        pauseSong()
+    }else playSong()
+})
+//prev song next song
+prevBtn.addEventListener('click', prevSong)
+nextBtn.addEventListener('click', nextSong)
+//update progress
+audio.addEventListener('timeupdate', progressUpdate)
+//
+progressContainer.addEventListener('click', setProgress)
+//
+audio.addEventListener('ended', nextSong)

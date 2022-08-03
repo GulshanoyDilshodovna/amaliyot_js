@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;800;900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;800;900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;200;300;400;500;600;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@100;200;300;400;500;600;800&display=swap');
 *{
     box-sizing: border-box;
     margin: 0;
@@ -782,7 +783,7 @@ overflow: hidden;
 
 
 /*======Simple Countdown Timer with JavaScript======*/
-body{
+/* body{
     font-family: 'Roboto', sans-serif;
     background-color: #000;
     height: 100vh;
@@ -798,7 +799,105 @@ p{
     justify-content: center;
     align-items: center;
     font-size: 50px;
+} */
+
+
+
+/*=======MUSIC PLAYER=======*/
+body {
+  font-family: 'Open Sans', sans-serif;
+  background: linear-gradient(128deg, #9b9b9b, #e0e0e0);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
 }
+.wrapper{
+    display: flex;
+    justify-content: center;
+}
+.audio_container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 350px;
+    height: 450px;
+    padding: 40px 25px;
+    margin: 60px 0;
+    border-radius: 20px;
+    background: #e0e0e0;
+    box-shadow: inset -27px -27px 67px #9b9b9b, inset 27px 27px 67px #a5a3a3;
+}
+.audio-container .play, img-container img{
+    animation-play-state: running;
 
-
-
+}
+#title{
+    font-size: 25px;
+    font-weight: 500;
+}
+.img-container img {
+    margin: 1rem;
+    width: 200px;
+    height: 200px;
+    padding: 10px;
+    border-radius: 50%;
+    object-fit: cover;
+    background-color: #fff;
+    box-shadow: inset 0 0 15px rgba(55,84,170,0),
+                inset 0 0 20px rgba(255,255,255,0),
+                inset 7px 7px 15px rgba(55,84,170,0.15),
+                inset -7px -7px -15px rgba(255,255,255,1),
+                inset  0 0 4px rgba(255,255,255,0.2);
+    animation: rotate 5s linear infinite;
+    animation-play-state: paused;
+}
+@keyframes rotate{
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+}
+.progress-container {
+    background-color: #a0a8e0;
+    border-radius: 4px;
+    height: 4px;
+    width: 100%;
+    margin-bottom: 1rem;
+}
+.progress {
+    height: 100%;
+    width: 0;
+    background-color: #f5bdbd;
+    transition: 0.3s linear;
+}
+.navigation {
+    
+}
+.btn {
+    text-align: center;
+    border-radius: 50%;
+    margin: 0.5rem;
+    width: 50px;
+    height: 50px;
+    font-size: 1rem;
+    font-weight: 700;
+    border: none;
+    color: #222;
+    background-color: #c0bbbb;
+    box-shadow: 7px -7px 14px #cbced1, -7px 7px 14px #fff;
+    cursor: pointer;
+    outline: none;
+}
+.btn:nth-child(2){
+    background-color: #e4e2e2;
+}
+.fas {
+}
+.fa-backward {
+}
+.fa-play {
+}
+.fa-forward {
+}
