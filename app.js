@@ -782,7 +782,7 @@ const audioContainer = document.getElementById('audio-container'),
     progressContainer = document.getElementById('progress-container'),
     progress = document.getElementById('progress'),
     cover = document.getElementById('cover'),
-    songs = ['Akbarali_Ochilov_Kelasanmi','Mustafo_Qirolicham '];
+    songs = [`Akbarali Ochilov Kelasanmi`,`Mustafo Qirolicham`, `Nodir Zoitov Umrim Seniki`, `Yulduz Usmonova Xasta bo'lma`];
 //let - o`zgaruvchiar
 let songIndex = 0
 
@@ -798,16 +798,16 @@ loadSong(songs[songIndex])
 //play song function
 function playSong(){
     audioContainer.classList.add('play')
-    playBtn.querySelector('i.fas').remove('fa-play')
-    playBtn.querySelector('i.fas').add('fa-pause')
+    playBtn.querySelector('i.fas').classList.remove('fa-play')
+    playBtn.querySelector('i.fas').classList.add('fa-pause')
 
     audio.play()
 }
 //pause song function
 function pauseSong(){
     audioContainer.classList.remove('play')
-    playBtn.querySelector('i.fas').add('fa-play')
-    playBtn.querySelector('i.fas').remove('fa-pause')
+    playBtn.querySelector('i.fas').classList.add('fa-play')
+    playBtn.querySelector('i.fas').classList.remove('fa-pause')
 
     audio.pause()
 }
@@ -833,7 +833,7 @@ function nextSong(){
 }
 // progress update function
 function progressUpdate(e){
-    const [duration, currentTime] = e.srcElement
+    const {duration, currentTime} = e.srcElement;
     const progressPercent = (currentTime/duration)*100
     progress.style.width = `${progressPercent}%`
 }
@@ -847,7 +847,7 @@ function setProgress(e){
 
 // events
 playBtn.addEventListener('click',()=>{
-    let = isPlaying = audioContainer.classList.contains('play')
+    let isPlaying = audioContainer.classList.contains('play')
     if(isPlaying){
         pauseSong()
     }else playSong()
