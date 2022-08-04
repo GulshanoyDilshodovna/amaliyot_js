@@ -881,3 +881,10 @@ const copyFunc = ()=>{
     demo.innerHTML = 'Copied'
     demo.style.opacity = '1'
 }
+
+
+if('serviceWorker' in navigator){
+    window.addEventListener('load', function(){
+        navigator.serviceWorker.register("/serviceWorker.js")
+    })
+}

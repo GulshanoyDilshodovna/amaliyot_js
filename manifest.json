@@ -1,0 +1,42 @@
+{
+    "name": "Color Picker WPA",
+    "short_name": "CP WPA",
+    "describtion": "This is test app",
+    "start_url": "index.html",
+    "display": "standalone",
+    "background-color": "#0D1117",
+    "theme_color": "#0D1117",
+    "orientitation": "portrait-primary",
+    "icons": [
+        {
+            "src": "/icons-wpa/android-launchericon-72-72.jpg",
+            "type": "image/jpg",
+            "sizes": "72x72",
+            "purpose": "any maskable"
+        },
+        {
+            "src": "/icons-wpa/android-launchericon-96-96.jpg",
+            "type": "image/jpg",
+            "sizes": "96x96",
+            "purpose": "any maskable"
+        },
+        {
+            "src": "/icons-wpa/android-launchericon-144-144.jpg",
+            "type": "image/jpg",
+            "sizes": "144x144",
+            "purpose": "any maskable"
+        },
+        {
+            "src": "/icons-wpa/android-launchericon-192-192.jpg",
+            "type": "image/jpg",
+            "sizes": "192x192",
+            "purpose": "any maskable"
+        },
+        {
+            "src": "/icons-wpa/android-launchericon-512-512.jpg",
+            "type": "image/jpg",
+            "sizes": "512x512",
+            "purpose": "any maskable"
+        }
+    ]
+}
