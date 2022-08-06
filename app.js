@@ -868,23 +868,40 @@ console.log(getArray);*/
 
 
 //===========COLOR PICKER============//
-const colorFunc = ()=>{
-const colorPicker = document.getElementById('input-color').value
-document.body.style.background = colorPicker
-document.getElementById('input-text').value = colorPicker
-}
+// const colorFunc = ()=>{
+// const colorPicker = document.getElementById('input-color').value
+// document.body.style.background = colorPicker
+// document.getElementById('input-text').value = colorPicker
+// }
 
-const hexColor = document.getElementById('input-text')
-const demo = document.getElementById('demo')
-const copyFunc = ()=>{
-    navigator.clipboard.writeText(hexColor.value)
-    demo.innerHTML = 'Copied'
-    demo.style.opacity = '1'
-}
+// const hexColor = document.getElementById('input-text')
+// const demo = document.getElementById('demo')
+// const copyFunc = ()=>{
+//     navigator.clipboard.writeText(hexColor.value)
+//     demo.innerHTML = 'Copied'
+//     demo.style.opacity = '1'
+// }
 
 
-if('serviceWorker' in navigator){
-    window.addEventListener('load', function(){
-        navigator.serviceWorker.register("/serviceWorker.js")
-    })
-}
+// if('serviceWorker' in navigator){
+//     window.addEventListener('load', function(){
+//         navigator.serviceWorker.register("/serviceWorker.js")
+//     })
+// }
+
+
+
+
+
+
+//========COVID-19 CHROME UCHUN EXTENTON===========//
+
+
+
+
+
+
+
+
+
+
