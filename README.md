@@ -1,10 +1,9 @@
 # amaliyot_js
-
-
-# RollDiceGame
-#Praduct Search
-#Color Picker
-#RandomGradientColor
-#Date
-#Counter
-#SmoothScroll
+# practices in javascript
+# Roll Dice Game
+# Praduct Search
+# Color Picker
+# Random Gradient Color
+# Date
+# Counter
+# SmoothScroll
